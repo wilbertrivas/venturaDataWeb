@@ -1,0 +1,36 @@
+@api=http://localhost:3000/asistenciaLaboral
+
+
+##LISTAMOS TODAS LAS ASISTENCIAL LABORALES
+GET {{api}}
+
+##CONTAMOS TODAS LAS ASISTENCIAS LABORALES ACTIVAS
+###
+GET {{api}}Count
+
+##CONSULTRAMOS UNA ASISTENCIA LABORAL EN PARTICULAR
+###
+GET {{api}}/7
+
+## CREAMOS UNA ASISTENCIA LABORAL EN PARTICULAR
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "descripcion": "ENFERMEDAD"
+}
+
+##ELIMINAMOS UNA ASISTENCIA LABORAL EN PARTICULAR
+###
+DELETE  {{api}}/10
+
+##ELIMINAMOS UNA ASISTENCIA LABORAL
+###
+PUT {{api}}/11
+Content-Type: application/json
+
+{
+    "descripcion": "MARIO",
+    "estado": 0
+}
